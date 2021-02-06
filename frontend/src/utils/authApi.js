@@ -1,5 +1,4 @@
-// export const BASE_URL = 'https://auth.nomoreparties.co';
-export const BASE_URL = 'https://api.soradimichi.students.nomoredomains.rocks';
+export const BASE_URL = 'http://localhost:3000';
 
 const fetchData = (baseURL, path, params) => fetch(`${baseURL}${path}`, params).then((res) => {
   if (res.ok) {

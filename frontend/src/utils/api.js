@@ -1,4 +1,4 @@
-class Api {
+export default class Api {
   constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
     this._headers = headers;
@@ -66,21 +66,3 @@ class Api {
     });
   }
 }
-
-const api = new Api({
-  baseUrl: 'https://api.soradimichi.students.nomoredomains.rocks',
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${localStorage.getItem('token')}`,
-  },
-});
-
-// const api = new Api({
-//   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-16',
-//   headers: {
-//     authorization: '9f008da4-23f8-43a7-a6e3-8665fc1f4b68',
-//     'Content-Type': 'application/json',
-//   },
-// });
-
-export { api as default };
