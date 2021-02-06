@@ -13,3 +13,5 @@ node_modules
 .DS_Store
 .idea
 .vscode
+../react-mesto-api-full/backend/.env
+.env

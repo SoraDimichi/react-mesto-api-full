@@ -7,8 +7,7 @@ const validAuth = celebrate({
       .email()
       .min(5)
       .max(30),
-    password: Joi
-      .string()
+    password: Joi.string()
       .required()
       .min(4),
   }),
@@ -25,7 +24,7 @@ const validUpdateAvatar = celebrate({
   body: Joi.object().keys({
     avatar: Joi.string().min(2)
       .max(200),
-  }),
+  }).unknown(true),
 });
 
 const validCreateCard = celebrate({

@@ -14,9 +14,10 @@ const { validAuth, validUpdateProfile, validUpdateAvatar } = require('../middlew
 router.post('/signin', validAuth, login);
 router.post('/signup', validAuth, createUser);
 
-router.get('/users', auth, getUsers);
-router.get('/users/me', auth, getMyProfile);
-router.patch('/users/me', auth, validUpdateProfile, updateProfile);
-router.patch('/users/me/avatar', auth, validUpdateAvatar, updateAvatar);
+router.use(auth);
+router.get('/users', getUsers);
+router.get('/users/me', getMyProfile);
+router.patch('/users/me', validUpdateProfile, updateProfile);
+router.patch('/users/me/avatar', validUpdateAvatar, updateAvatar);
 
 module.exports = router;
