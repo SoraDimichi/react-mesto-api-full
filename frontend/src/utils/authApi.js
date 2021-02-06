@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://api.soradimichi.students.nomoredomains.rocks';
 
 const fetchData = (baseURL, path, params) => fetch(`${baseURL}${path}`, params).then((res) => {
   if (res.ok) {
