@@ -197,16 +197,12 @@ function App() {
         />
         <main className="content">
           <Switch>
-            (
             <Route path="/sign-in">
               <Login onLogin={handleLogin} />
             </Route>
-            )
-            (
             <Route path="/sign-up">
               <Register onRegister={handleRegister} />
             </Route>
-            )
             <ProtectedRoute
               path="/"
               component={Main}
